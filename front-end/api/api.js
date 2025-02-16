@@ -1,6 +1,8 @@
 import axios from "axios";
+import "dotenv/config";
 
-const URL = "http://localhost:3300";
+const { NODE_ENV } = process.env.NODE_ENV;
+const URL = NODE_ENV === "development" ? "http://localhost:3300/api" : "/api";
 
 const responseArtist = await axios.get(`${URL}/artistas`);
 const responseSong = await axios.get(`${URL}/musicas`);
