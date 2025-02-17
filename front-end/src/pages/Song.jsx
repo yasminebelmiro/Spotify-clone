@@ -24,6 +24,7 @@ const Song = () => {
   );
 
   const randomIdFromArtist = songsArrayFromArtist[radomIndex]._id;
+  console.log(randomIdFromArtist)
 
   return (
     <div className="song">
